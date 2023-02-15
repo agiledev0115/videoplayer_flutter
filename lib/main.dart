@@ -34,7 +34,11 @@ class _MyHomePageState extends State<MyHomePage> {
   String url = '';
   String url1 = '';
   @override
-  void initState() async {
+  void initState() {
+    getInstaUrl();
+  }
+
+  void getInstaUrl() async {
     final List<InstaPost> post = await FlutterInsta().getPostData(
         "https://www.instagram.com/reel/CohqWpyDNSm/?utm_source=ig_web_copy_link");
     // final List<InstaPost> post1 = await FlutterInsta().getPostData(
