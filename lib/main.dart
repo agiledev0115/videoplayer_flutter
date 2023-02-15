@@ -35,6 +35,7 @@ class _MyHomePageState extends State<MyHomePage> {
   String url1 = '';
   @override
   void initState() {
+    super.initState();
     getInstaUrl();
   }
 
@@ -45,7 +46,6 @@ class _MyHomePageState extends State<MyHomePage> {
     //     "https://www.instagram.com/tv/CTfdcAWB1AM/?utm_source=ig_web_copy_link");
     url = post[0].displayURL.toString();
     // url1 = post1[0].displayURL.toString();
-    super.initState();
     _controller = VideoPlayerController.network(url)
       ..initialize().then((_) {
         // Ensure the first frame is shown after the video is initialized, even before the play button has been pressed.
